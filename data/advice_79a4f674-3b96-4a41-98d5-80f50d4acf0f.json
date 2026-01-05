@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "run_id": "79a4f674-3b96-4a41-98d5-80f50d4acf0f",
+  "summary": "[demo] HOLD/APPROVED/EXECUTE 판단 보조(더미)",
+  "risks": [
+    "execution disabled by default",
+    "approval required"
+  ],
+  "counter_cases": [
+    "approved but EXECUTION_ENABLED=0 => BLOCKED"
+  ],
+  "confidence": 0.3,
+  "ts": "2026-01-05T10:06:31.874783"
+}

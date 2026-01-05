@@ -1,0 +1,398 @@
+# server.py (A Final: HOLD + Human Approval + Scope + TTL + One-shot + HRN)
+from http.server import BaseHTTPRequestHandler, HTTPServer
+import datetime
+import os
+import time
+import traceback
+from urllib.parse import urlparse, parse_qs
+
+PORT = 25613
+BIND_HOST = "127.0.0.1"
+
+# --- Core State ---
+HOLD = True
+
+# Approval metadata (scope/ttl/uses)
+APPROVAL_SCOPE = None
+APPROVAL_EXPIRES_AT = None
+APPROVAL_USES_LEFT = 0
+
+# Allowed scopes (lock meaning, prevent scope sprawl)
+ALLOWED_SCOPES = {"test-only", "dryrun", "sim"}
+
+LOG_PATH = "logs/events.log"
+
+
+def log(msg: str) -> None:
+    os.makedirs("logs", exist_ok=True)
+    with open(LOG_PATH, "a", encoding="utf-8") as f:
+        f.write(f"{datetime.datetime.now().isoformat()} | {msg}\n")
+
+
+# --- HRN: HOLD Reason Normalizer (thin, log-only) ---
+HRN_MAP = {
+    "human_reset": "HRN_HUMAN_RESET",
+    "one_shot_consumed": "HRN_ONE_SHOT_CONSUMED",
+    "approval_expired_on_execute": "HRN_TTL_EXPIRED_ON_EXECUTE",
+    "approval_expired_on_status": "HRN_TTL_EXPIRED_ON_STATUS",
+    "no_uses_left_on_execute": "HRN_NO_USES_LEFT",
+    "invalid_scope": "HRN_INVALID_SCOPE",
+    "server_exception": "HRN_SERVER_EXCEPTION",
+}
+
+
+def hrn(reason: str) -> str:
+    return HRN_MAP.get(reason, "HRN_OTHER")
+
+
+def reset_to_hold(reason: str) -> None:
+    """Return system to HOLD and clear approval metadata."""
+    global HOLD, APPROVAL_SCOPE, APPROVAL_EXPIRES_AT, APPROVAL_USES_LEFT
+    HOLD = True
+    APPROVAL_SCOPE = None
+    APPROVAL_EXPIRES_AT = None
+    APPROVAL_USES_LEFT = 0
+    log(f"SYSTEM -> HOLD | reason={reason} | hrn={hrn(reason)}")
+
+
+def approval_is_expired() -> bool:
+    """Check TTL expiry."""
+    if APPROVAL_EXPIRES_AT is None:
+        return True
+    return time.time() > APPROVAL_EXPIRES_AT
+
+
+def ttl_left_seconds() -> int:
+    if APPROVAL_EXPIRES_AT is None:
+        return 0
+    return int(max(0, APPROVAL_EXPIRES_AT - time.time()))
+
+
+class Handler(BaseHTTPRequestHandler):
+    def _write(self, status_code: int, body: str) -> None:
+        self.send_response(status_code)
+        self.end_headers()
+        self.wfile.write(body.encode("utf-8"))
+
+    def do_GET(self):
+        global HOLD, APPROVAL_SCOPE, APPROVAL_EXPIRES_AT, APPROVAL_USES_LEFT
+
+        try:
+            path = self.path
+
+            # --- STATUS ---
+            if path == "/status":
+                if HOLD:
+                    self._write(200, "HOLD")
+                    log("STATUS CHECK -> HOLD")
+                else:
+                    # If approved but expired, auto-hold
+                    if approval_is_expired():
+                        reset_to_hold("approval_expired_on_status")
+                        self._write(200, "HOLD")
+                        log("STATUS CHECK -> HOLD (expired -> auto reset)")
+                        return
+
+                    msg = (
+                        f"APPROVED | scope={APPROVAL_SCOPE} | "
+                        f"ttl_left={ttl_left_seconds()}s | uses_left={APPROVAL_USES_LEFT}"
+                    )
+                    self._write(200, msg)
+                    log(f"STATUS CHECK -> {msg}")
+                return
+
+            # --- APPROVE (Human) ---
+            elif path.startswith("/approve"):
+                # URL example: /approve?scope=dryrun
+                qs = parse_qs(urlparse(path).query)
+                requested_scope = (qs.get("scope", ["test-only"])[0] or "test-only").strip()
+
+                # Scope whitelist check
+                if requested_scope not in ALLOWED_SCOPES:
+                    reset_to_hold("invalid_scope")
+                    self._write(403, f"DENIED: invalid scope={requested_scope}")
+                    log(f"HUMAN APPROVAL -> DENIED (INVALID_SCOPE) | scope={requested_scope}")
+                    return
+
+                # Human approval opens a short, limited window
+                HOLD = False
+                APPROVAL_SCOPE = requested_scope
+                APPROVAL_USES_LEFT = 1
+                APPROVAL_EXPIRES_AT = time.time() + 60  # 60 seconds TTL
+
+                self._write(200, f"APPROVED: scope={APPROVAL_SCOPE} ttl=60s uses=1")
+                log(f"HUMAN APPROVAL -> HOLD RELEASED | scope={APPROVAL_SCOPE} ttl=60s uses=1")
+                return
+
+            # --- RESET (Human) ---
+            elif path == "/reset":
+                reset_to_hold("human_reset")
+                self._write(200, "HOLD RESET")
+                log("HUMAN RESET -> SYSTEM RETURNED TO HOLD")
+                return
+
+            # --- EXECUTE (NO REAL EXECUTION) ---
+            elif path == "/execute":
+                # If HOLD, always block
+                if HOLD:
+                    self._write(403, "EXECUTION BLOCKED: HOLD")
+                    log("EXECUTE REQUEST -> BLOCKED (HOLD)")
+                    return
+
+                # If approval expired, block and auto-hold
+                if approval_is_expired():
+                    reset_to_hold("approval_expired_on_execute")
+                    self._write(403, "EXECUTION BLOCKED: APPROVAL EXPIRED -> HOLD")
+                    log("EXECUTE REQUEST -> BLOCKED (EXPIRED) -> HOLD")
+                    return
+
+                # If no uses left, block and auto-hold
+                if APPROVAL_USES_LEFT <= 0:
+                    reset_to_hold("no_uses_left_on_execute")
+                    self._write(403, "EXECUTION BLOCKED: NO USES LEFT -> HOLD")
+                    log("EXECUTE REQUEST -> BLOCKED (NO USES LEFT) -> HOLD")
+                    return
+
+                # Accept request, but do NOT execute anything
+                APPROVAL_USES_LEFT -= 1
+
+                # One-shot: after consuming last use, return to HOLD automatically
+                if APPROVAL_USES_LEFT == 0:
+                    self._write(200, "EXECUTION REQUEST ACCEPTED (NO EXECUTION) -> AUTO HOLD")
+                    log(f"EXECUTE REQUEST -> ACCEPTED | scope={APPROVAL_SCOPE} -> AUTO HOLD")
+                    reset_to_hold("one_shot_consumed")
+                else:
+                    self._write(200, "EXECUTION REQUEST ACCEPTED (NO EXECUTION)")
+                    log(f"EXECUTE REQUEST -> ACCEPTED | scope={APPROVAL_SCOPE}")
+                return
+
+            # --- UNKNOWN (deny by default) ---
+            else:
+                # favicon.ico is common; still deny (safe)
+                self._write(403, "DENIED")
+                log(f"UNKNOWN REQUEST -> DENIED | path={path}")
+                return
+
+        except Exception as e:
+            # Log server-side error to file (so blank browser page is diagnosable)
+            err = "".join(traceback.format_exception(type(e), e, e.__traceback__))
+            log("SERVER ERROR -> " + err.replace("\n", "\\n"))
+            # Fail safe: return HOLD
+            try:
+                reset_to_hold("server_exception")
+            except Exception:
+                pass
+            try:
+                self._write(500, "INTERNAL ERROR -> HOLD")
+            except Exception:
+                pass
+
+
+def main():
+    print("SYSTEM START -> HOLD")
+    log("SYSTEM START -> HOLD")
+    server = HTTPServer((BIND_HOST, PORT), Handler)
+    server.serve_forever()
+
+
+if __name__ == "__main__":
+    main()
+# server.py (A Final: HOLD + Human Approval + Scope + TTL + One-shot + HRN)
+from http.server import BaseHTTPRequestHandler, HTTPServer
+import datetime
+import os
+import time
+import traceback
+from urllib.parse import urlparse, parse_qs
+
+PORT = 25613
+BIND_HOST = "127.0.0.1"
+
+# --- Core State ---
+HOLD = True
+
+# Approval metadata (scope/ttl/uses)
+APPROVAL_SCOPE = None
+APPROVAL_EXPIRES_AT = None
+APPROVAL_USES_LEFT = 0
+
+# Allowed scopes (lock meaning, prevent scope sprawl)
+ALLOWED_SCOPES = {"test-only", "dryrun", "sim"}
+
+LOG_PATH = "logs/events.log"
+
+
+def log(msg: str) -> None:
+    os.makedirs("logs", exist_ok=True)
+    with open(LOG_PATH, "a", encoding="utf-8") as f:
+        f.write(f"{datetime.datetime.now().isoformat()} | {msg}\n")
+
+
+# --- HRN: HOLD Reason Normalizer (thin, log-only) ---
+HRN_MAP = {
+    "human_reset": "HRN_HUMAN_RESET",
+    "one_shot_consumed": "HRN_ONE_SHOT_CONSUMED",
+    "approval_expired_on_execute": "HRN_TTL_EXPIRED_ON_EXECUTE",
+    "approval_expired_on_status": "HRN_TTL_EXPIRED_ON_STATUS",
+    "no_uses_left_on_execute": "HRN_NO_USES_LEFT",
+    "invalid_scope": "HRN_INVALID_SCOPE",
+    "server_exception": "HRN_SERVER_EXCEPTION",
+}
+
+
+def hrn(reason: str) -> str:
+    return HRN_MAP.get(reason, "HRN_OTHER")
+
+
+def reset_to_hold(reason: str) -> None:
+    """Return system to HOLD and clear approval metadata."""
+    global HOLD, APPROVAL_SCOPE, APPROVAL_EXPIRES_AT, APPROVAL_USES_LEFT
+    HOLD = True
+    APPROVAL_SCOPE = None
+    APPROVAL_EXPIRES_AT = None
+    APPROVAL_USES_LEFT = 0
+    log(f"SYSTEM -> HOLD | reason={reason} | hrn={hrn(reason)}")
+
+
+def approval_is_expired() -> bool:
+    """Check TTL expiry."""
+    if APPROVAL_EXPIRES_AT is None:
+        return True
+    return time.time() > APPROVAL_EXPIRES_AT
+
+
+def ttl_left_seconds() -> int:
+    if APPROVAL_EXPIRES_AT is None:
+        return 0
+    return int(max(0, APPROVAL_EXPIRES_AT - time.time()))
+
+
+class Handler(BaseHTTPRequestHandler):
+    def _write(self, status_code: int, body: str) -> None:
+        self.send_response(status_code)
+        self.end_headers()
+        self.wfile.write(body.encode("utf-8"))
+
+    def do_GET(self):
+        global HOLD, APPROVAL_SCOPE, APPROVAL_EXPIRES_AT, APPROVAL_USES_LEFT
+
+        try:
+            path = self.path
+
+            # --- STATUS ---
+            if path == "/status":
+                if HOLD:
+                    self._write(200, "HOLD")
+                    log("STATUS CHECK -> HOLD")
+                else:
+                    # If approved but expired, auto-hold
+                    if approval_is_expired():
+                        reset_to_hold("approval_expired_on_status")
+                        self._write(200, "HOLD")
+                        log("STATUS CHECK -> HOLD (expired -> auto reset)")
+                        return
+
+                    msg = (
+                        f"APPROVED | scope={APPROVAL_SCOPE} | "
+                        f"ttl_left={ttl_left_seconds()}s | uses_left={APPROVAL_USES_LEFT}"
+                    )
+                    self._write(200, msg)
+                    log(f"STATUS CHECK -> {msg}")
+                return
+
+            # --- APPROVE (Human) ---
+            elif path.startswith("/approve"):
+                # URL example: /approve?scope=dryrun
+                qs = parse_qs(urlparse(path).query)
+                requested_scope = (qs.get("scope", ["test-only"])[0] or "test-only").strip()
+
+                # Scope whitelist check
+                if requested_scope not in ALLOWED_SCOPES:
+                    reset_to_hold("invalid_scope")
+                    self._write(403, f"DENIED: invalid scope={requested_scope}")
+                    log(f"HUMAN APPROVAL -> DENIED (INVALID_SCOPE) | scope={requested_scope}")
+                    return
+
+                # Human approval opens a short, limited window
+                HOLD = False
+                APPROVAL_SCOPE = requested_scope
+                APPROVAL_USES_LEFT = 1
+                APPROVAL_EXPIRES_AT = time.time() + 60  # 60 seconds TTL
+
+                self._write(200, f"APPROVED: scope={APPROVAL_SCOPE} ttl=60s uses=1")
+                log(f"HUMAN APPROVAL -> HOLD RELEASED | scope={APPROVAL_SCOPE} ttl=60s uses=1")
+                return
+
+            # --- RESET (Human) ---
+            elif path == "/reset":
+                reset_to_hold("human_reset")
+                self._write(200, "HOLD RESET")
+                log("HUMAN RESET -> SYSTEM RETURNED TO HOLD")
+                return
+
+            # --- EXECUTE (NO REAL EXECUTION) ---
+            elif path == "/execute":
+                # If HOLD, always block
+                if HOLD:
+                    self._write(403, "EXECUTION BLOCKED: HOLD")
+                    log("EXECUTE REQUEST -> BLOCKED (HOLD)")
+                    return
+
+                # If approval expired, block and auto-hold
+                if approval_is_expired():
+                    reset_to_hold("approval_expired_on_execute")
+                    self._write(403, "EXECUTION BLOCKED: APPROVAL EXPIRED -> HOLD")
+                    log("EXECUTE REQUEST -> BLOCKED (EXPIRED) -> HOLD")
+                    return
+
+                # If no uses left, block and auto-hold
+                if APPROVAL_USES_LEFT <= 0:
+                    reset_to_hold("no_uses_left_on_execute")
+                    self._write(403, "EXECUTION BLOCKED: NO USES LEFT -> HOLD")
+                    log("EXECUTE REQUEST -> BLOCKED (NO USES LEFT) -> HOLD")
+                    return
+
+                # Accept request, but do NOT execute anything
+                APPROVAL_USES_LEFT -= 1
+
+                # One-shot: after consuming last use, return to HOLD automatically
+                if APPROVAL_USES_LEFT == 0:
+                    self._write(200, "EXECUTION REQUEST ACCEPTED (NO EXECUTION) -> AUTO HOLD")
+                    log(f"EXECUTE REQUEST -> ACCEPTED | scope={APPROVAL_SCOPE} -> AUTO HOLD")
+                    reset_to_hold("one_shot_consumed")
+                else:
+                    self._write(200, "EXECUTION REQUEST ACCEPTED (NO EXECUTION)")
+                    log(f"EXECUTE REQUEST -> ACCEPTED | scope={APPROVAL_SCOPE}")
+                return
+
+            # --- UNKNOWN (deny by default) ---
+            else:
+                # favicon.ico is common; still deny (safe)
+                self._write(403, "DENIED")
+                log(f"UNKNOWN REQUEST -> DENIED | path={path}")
+                return
+
+        except Exception as e:
+            # Log server-side error to file (so blank browser page is diagnosable)
+            err = "".join(traceback.format_exception(type(e), e, e.__traceback__))
+            log("SERVER ERROR -> " + err.replace("\n", "\\n"))
+            # Fail safe: return HOLD
+            try:
+                reset_to_hold("server_exception")
+            except Exception:
+                pass
+            try:
+                self._write(500, "INTERNAL ERROR -> HOLD")
+            except Exception:
+                pass
+
+
+def main():
+    print("SYSTEM START -> HOLD")
+    log("SYSTEM START -> HOLD")
+    server = HTTPServer((BIND_HOST, PORT), Handler)
+    server.serve_forever()
+
+
+if __name__ == "__main__":
+    main()

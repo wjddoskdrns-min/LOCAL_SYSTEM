@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "run_id": "d2654582-7fec-4d20-bbed-6bdf1b651ced",
+  "summary": "[demo] state=APPROVED exec_enabled=0",
+  "risks": [
+    "execution disabled (EXECUTION_ENABLED=0)"
+  ],
+  "counter_cases": [
+    "approved but disabled => BLOCKED"
+  ],
+  "confidence": 0.4,
+  "ts": "2026-01-05T10:21:04.308657+00:00"
+}

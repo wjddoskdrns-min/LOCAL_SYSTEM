@@ -1,0 +1,36 @@
+name: LOCAL_SYSTEM_CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install fastapi uvicorn
+
+      - name: Start server
+        shell: pwsh
+        run: |
+          $env:EXECUTION_ENABLED="0"
+          Start-Process python "-m uvicorn app.main:app --host 127.0.0.1 --port 25613"
+          Start-Sleep -Seconds 3
+
+      - name: Verify steps
+        shell: pwsh
+        run: |
+          ./scripts/verify_local_system.ps1
+          ./scripts/verify_local_system_step4.ps1
+          ./scripts/verify_local_system_step5.ps1

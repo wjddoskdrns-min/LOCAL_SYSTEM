@@ -1,0 +1,19 @@
+{"event": "REQUEST_CREATED", "run_id": "5e38aead-068b-4bda-ae26-435278cd7507", "kind": "demo", "hold": true, "ts": "2026-01-05T08:40:10.262339"}
+{"event": "APPROVED", "run_id": "<RUN_ID>", "approver": "partner", "note": "ok", "ts": "2026-01-05T08:40:23.893309"}
+{"event": "EXECUTE_BLOCKED", "run_id": "<RUN_ID>", "reason": "EXECUTION_DISABLED", "ts": "2026-01-05T08:44:09.622497"}
+{"event": "REQUEST_CREATED", "run_id": "4bf871ec-d7e7-43c9-958a-182a3315d24e", "kind": "demo", "hold": true, "ts": "2026-01-05T09:49:25.165681"}
+{"event": "REQUEST_CREATED", "run_id": "3a0abd3b-6e40-43c5-beea-f8015783d32e", "kind": "demo", "hold": true, "ts": "2026-01-05T09:50:17.807322"}
+{"event": "REQUEST_CREATED", "run_id": null, "kind": "demo", "hold": true, "ts": "2026-01-05T09:58:45.788850"}
+{"event": "REQUEST_CREATED", "run_id": null, "kind": "demo", "hold": true, "ts": "2026-01-05T10:03:00.667479"}
+{"event": "REQUEST_CREATED", "run_id": "5ab0a043-de45-42b9-bdf5-2e070a147fb6", "ts": "2026-01-05T10:04:22.193264", "kind": "demo", "hold": true}
+{"event": "APPROVED", "run_id": "5ab0a043-de45-42b9-bdf5-2e070a147fb6", "ts": "2026-01-05T10:04:22.212034", "approver": "partner", "note": "ok"}
+{"event": "EXECUTE_BLOCKED", "run_id": "5ab0a043-de45-42b9-bdf5-2e070a147fb6", "ts": "2026-01-05T10:04:22.225037", "reason": "EXECUTION_DISABLED"}
+{"event": "ADVICE_CREATED", "run_id": "5ab0a043-de45-42b9-bdf5-2e070a147fb6", "ts": "2026-01-05T10:04:22.225037", "reason": "OK"}
+{"event": "REQUEST_CREATED", "run_id": "79a4f674-3b96-4a41-98d5-80f50d4acf0f", "ts": "2026-01-05T10:06:31.860510", "kind": "demo", "hold": true}
+{"event": "APPROVED", "run_id": "79a4f674-3b96-4a41-98d5-80f50d4acf0f", "ts": "2026-01-05T10:06:31.870860", "approver": "partner", "note": "ok"}
+{"event": "EXECUTE_BLOCKED", "run_id": "79a4f674-3b96-4a41-98d5-80f50d4acf0f", "ts": "2026-01-05T10:06:31.872860", "reason": "EXECUTION_DISABLED"}
+{"event": "ADVICE_CREATED", "run_id": "79a4f674-3b96-4a41-98d5-80f50d4acf0f", "ts": "2026-01-05T10:06:31.874783", "reason": "OK"}
+{"ts": "2026-01-05T10:15:11.972388+00:00", "event": "REQUEST_CREATED", "run_id": "7d66d729-e0cc-4a0b-8aa6-4115ea3bb3b5", "kind": "demo", "hold": true}
+{"ts": "2026-01-05T10:15:11.972388+00:00", "event": "APPROVED", "run_id": "7d66d729-e0cc-4a0b-8aa6-4115ea3bb3b5", "approver": "partner", "note": "ok"}
+{"ts": "2026-01-05T10:15:11.972388+00:00", "event": "EXECUTED", "run_id": "7d66d729-e0cc-4a0b-8aa6-4115ea3bb3b5", "reason": "OK"}
+{"ts": "2026-01-05T10:15:11.972388+00:00", "event": "ADVICE_CREATED", "run_id": "7d66d729-e0cc-4a0b-8aa6-4115ea3bb3b5", "reason": "STUB"}

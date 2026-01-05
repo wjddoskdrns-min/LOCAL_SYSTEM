@@ -1,0 +1,443 @@
+2026-01-04 08:11:46.090951 | SYSTEM START -> HOLD
+2026-01-04 08:12:14.676208 | STATUS CHECK -> HOLD
+2026-01-04 08:12:14.710207 | UNKNOWN REQUEST -> DENIED
+2026-01-04 08:16:07.338079 | SYSTEM START -> HOLD
+2026-01-04 08:16:32.002096 | STATUS CHECK -> HOLD
+2026-01-04 08:16:32.029820 | UNKNOWN REQUEST -> DENIED
+2026-01-04 08:16:42.704933 | HUMAN APPROVAL -> HOLD RELEASED
+2026-01-04 08:16:42.730044 | UNKNOWN REQUEST -> DENIED
+2026-01-04 08:16:51.152997 | STATUS CHECK -> APPROVED
+2026-01-04 08:16:51.179773 | UNKNOWN REQUEST -> DENIED
+2026-01-04 08:19:39.181055 | SYSTEM START -> HOLD
+2026-01-04 08:19:52.121742 | STATUS CHECK -> HOLD
+2026-01-04 08:19:52.149300 | UNKNOWN REQUEST -> DENIED
+2026-01-04 08:20:29.356677 | UNKNOWN REQUEST -> DENIED
+2026-01-04 08:20:29.388989 | UNKNOWN REQUEST -> DENIED
+2026-01-04 08:27:17.869262 | SYSTEM START -> HOLD
+2026-01-04 08:31:26.165879 | SYSTEM START -> HOLD
+2026-01-04 08:31:46.624841 | HUMAN APPROVAL -> HOLD RELEASED
+2026-01-04 08:31:46.656120 | UNKNOWN REQUEST -> DENIED
+2026-01-04 08:31:56.416880 | STATUS CHECK -> APPROVED
+2026-01-04 08:31:56.439652 | UNKNOWN REQUEST -> DENIED
+2026-01-04 08:32:04.993276 | HUMAN RESET -> SYSTEM RETURNED TO HOLD
+2026-01-04 08:32:05.020641 | UNKNOWN REQUEST -> DENIED
+2026-01-04 08:32:12.000774 | STATUS CHECK -> HOLD
+2026-01-04 08:32:12.029186 | UNKNOWN REQUEST -> DENIED
+2026-01-04 08:41:32.404512 | SYSTEM START -> HOLD
+2026-01-04 08:41:43.696893 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only
+2026-01-04 08:41:43.722251 | UNKNOWN REQUEST -> DENIED
+2026-01-04 08:41:54.627443 | UNKNOWN REQUEST -> DENIED
+2026-01-04 08:42:27.852512 | UNKNOWN REQUEST -> DENIED
+2026-01-04 08:47:33.118678 | SYSTEM START -> HOLD
+2026-01-04 08:47:47.984864 | STATUS CHECK -> HOLD
+2026-01-04 08:47:48.010016 | UNKNOWN REQUEST -> DENIED
+2026-01-04 08:47:54.702252 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only
+2026-01-04 08:47:54.727954 | UNKNOWN REQUEST -> DENIED
+2026-01-04 08:48:03.152663 | STATUS CHECK -> APPROVED | scope=test-only
+2026-01-04 08:48:03.181641 | UNKNOWN REQUEST -> DENIED
+2026-01-04 08:50:44.627246 | SYSTEM START -> HOLD
+2026-01-04 08:50:56.016463 | EXECUTE REQUEST -> BLOCKED (HOLD)
+2026-01-04 08:50:56.043488 | UNKNOWN REQUEST -> DENIED
+2026-01-04T09:02:00.526222 | SYSTEM START -> HOLD
+2026-01-04T09:02:17.208511 | STATUS CHECK -> HOLD
+2026-01-04T09:02:17.236041 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:02:25.903174 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+2026-01-04T09:02:25.925543 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:02:38.919713 | STATUS CHECK -> APPROVED | scope=test-only | ttl_left=46s | uses_left=1
+2026-01-04T09:02:38.946667 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:02:54.823902 | EXECUTE REQUEST -> ACCEPTED | scope=test-only -> AUTO HOLD
+2026-01-04T09:02:54.823902 | SYSTEM -> HOLD | reason=one_shot_consumed
+2026-01-04T09:02:54.852021 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:03:05.671288 | STATUS CHECK -> HOLD
+2026-01-04T09:03:05.698976 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:07:29.868947 | SYSTEM START -> HOLD
+2026-01-04T09:07:42.728777 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+2026-01-04T09:07:42.755729 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:07:56.743302 | HUMAN APPROVAL -> HOLD RELEASED | scope=dryrun ttl=60s uses=1
+2026-01-04T09:07:56.773519 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:08:12.537470 | SYSTEM -> HOLD | reason=invalid_scope
+2026-01-04T09:08:12.538469 | HUMAN APPROVAL -> DENIED (INVALID_SCOPE) | scope=admin
+2026-01-04T09:08:12.563308 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:08:39.215618 | STATUS CHECK -> HOLD
+2026-01-04T09:08:39.231789 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:08:39.931657 | STATUS CHECK -> HOLD
+2026-01-04T09:08:39.942991 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:08:40.175376 | STATUS CHECK -> HOLD
+2026-01-04T09:08:40.188443 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:08:40.383665 | STATUS CHECK -> HOLD
+2026-01-04T09:08:40.397035 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:08:48.011775 | STATUS CHECK -> HOLD
+2026-01-04T09:08:48.023775 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:08:48.428290 | STATUS CHECK -> HOLD
+2026-01-04T09:08:48.438756 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:08:48.636001 | STATUS CHECK -> HOLD
+2026-01-04T09:08:48.649611 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:08:48.827850 | STATUS CHECK -> HOLD
+2026-01-04T09:08:48.840916 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:08:49.023812 | STATUS CHECK -> HOLD
+2026-01-04T09:08:49.035599 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:31:58.474593 | SYSTEM START -> HOLD
+2026-01-04T09:32:22.100451 | HUMAN APPROVAL -> HOLD RELEASED | scope=dryrun ttl=60s uses=1
+2026-01-04T09:32:22.121851 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:32:39.114010 | STATUS CHECK -> APPROVED | scope=dryrun | ttl_left=42s | uses_left=1
+2026-01-04T09:32:39.131009 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:32:56.593911 | EXECUTE REQUEST -> ACCEPTED | scope=dryrun -> AUTO HOLD
+2026-01-04T09:32:56.594912 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+2026-01-04T09:32:56.610344 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T09:33:21.794218 | STATUS CHECK -> HOLD
+2026-01-04T09:33:21.811533 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T10:55:31.301193 | SYSTEM START -> HOLD
+2026-01-04T10:56:09.257187 | SYSTEM START -> HOLD
+2026-01-04T10:56:23.029123 | STATUS CHECK -> HOLD
+2026-01-04T10:56:23.060184 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T10:56:31.448520 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+2026-01-04T10:56:31.474719 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T10:56:39.793331 | D_RUN_RESULT -> {"ok": true, "out": {"ts": 1767491799.5890288, "scope": "test-only", "mode": "noop", "note": "D_LAYER_OK_NO_EXECUTION"}}
+2026-01-04T10:56:39.793331 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+2026-01-04T10:56:39.794352 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD
+2026-01-04T10:56:39.819221 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T10:56:53.034196 | STATUS CHECK -> HOLD
+2026-01-04T10:56:53.059376 | UNKNOWN REQUEST -> DENIED | path=/favicon.ico
+2026-01-04T12:11:16.368913 | SYSTEM START -> HOLD
+2026-01-04T12:11:46.146590 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+2026-01-04T12:13:37.170327 | SYSTEM -> HOLD | reason=approval_expired_on_execute | hrn=HRN_TTL_EXPIRED_ON_EXECUTE
+2026-01-04T12:13:37.170327 | EXECUTE REQUEST -> BLOCKED (EXPIRED) -> HOLD
+2026-01-04T12:13:40.516817 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+2026-01-04T12:13:51.284862 | {"type": "D_RUN_RESULT", "payload": {"ok": true, "out": {"ts": 1767496431.0802052, "scope": "test-only", "mode": "noop", "note": "D_LAYER_OK_NO_EXECUTION"}}}
+2026-01-04T12:13:51.285566 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+2026-01-04T12:13:51.286479 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD
+2026-01-04T12:15:55.764318 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+2026-01-04T12:15:56.301116 | {"type": "D_RUN_RESULT", "payload": {"ok": true, "out": {"ts": 1767496556.0819814, "scope": "test-only", "mode": "noop", "note": "D_LAYER_OK_NO_EXECUTION"}}}
+2026-01-04T12:15:56.301116 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+2026-01-04T12:15:56.301116 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD
+2026-01-04T12:16:04.519497 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+2026-01-04T12:16:04.967949 | {"type": "D_RUN_RESULT", "payload": {"ok": true, "out": {"ts": 1767496564.7832344, "scope": "test-only", "mode": "noop", "note": "D_LAYER_OK_NO_EXECUTION"}}}
+2026-01-04T12:16:04.967949 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+2026-01-04T12:16:04.969870 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD
+2026-01-04T12:32:04.859000 | STATUS CHECK -> HOLD
+2026-01-04T12:32:04.868819 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+2026-01-04T12:32:04.894172 | UNKNOWN REQUEST -> DENIED | path=/execute?mode=noop
+2026-01-04T12:32:56.045819 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+2026-01-04T12:32:56.077116 | UNKNOWN REQUEST -> DENIED | path=/execute?mode=dryrun
+2026-01-04T12:32:56.082044 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+2026-01-04T12:32:56.119862 | UNKNOWN REQUEST -> DENIED | path=/execute?mode=sim
+2026-01-04T12:33:23.676617 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+2026-01-04T12:33:23.707596 | UNKNOWN REQUEST -> DENIED | path=/execute?mode=admin
+2026-01-04T12:40:42.948108 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+2026-01-04T12:40:43.471816 | {"type": "D_RUN_RESULT", "payload": {"ok": true, "out": {"ts": 1767498043.2797947, "scope": "test-only", "mode": "noop", "note": "D_LAYER_OK_NO_EXECUTION"}}}
+2026-01-04T12:40:43.472318 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+2026-01-04T12:40:43.472957 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD
+{"ts": "2026-01-04T03:47:57.115173", "type": "SYSTEM_HOLD", "payload": {"reason": "system_start", "hrn": "HRN_OK", "human": "SYSTEM -> HOLD | reason=system_start | hrn=HRN_OK"}}
+2026-01-04T03:47:57.115173 | SYSTEM -> HOLD | reason=system_start | hrn=HRN_OK
+{"ts": "2026-01-04T03:48:40.555145", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T03:48:40.555145 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T03:48:45.420553", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "noop", "out": {"note": "NO_EXECUTION"}}}
+{"ts": "2026-01-04T03:48:45.420553", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T03:48:45.420553 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T03:48:45.420553", "type": "EXECUTE_REQUEST", "payload": {"mode": "noop", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD"}}
+2026-01-04T03:48:45.420553 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD
+{"ts": "2026-01-04T03:48:50.811643", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T03:48:50.811643 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T03:48:50.828115", "type": "EXECUTE_REQUEST", "payload": {"mode": "dryrun", "scope": "test-only", "result": "DENIED", "hrn": "HRN_INVALID_MODE", "human": "EXECUTE REQUEST -> DENIED | scope=test-only mode=dryrun"}}
+2026-01-04T03:48:50.828115 | EXECUTE REQUEST -> DENIED | scope=test-only mode=dryrun
+{"ts": "2026-01-04T03:48:50.828115", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T03:48:50.828115 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T03:48:56.402281", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T03:48:56.402281 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T03:48:56.729940", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "sim", "out": {"ts": 1767498536.6514673, "scope": "test-only", "mode": "sim", "note": "D_LAYER_OK_NO_EXECUTION"}}}
+{"ts": "2026-01-04T03:48:56.730449", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T03:48:56.730449 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T03:48:56.731023", "type": "EXECUTE_REQUEST", "payload": {"mode": "sim", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD"}}
+2026-01-04T03:48:56.731023 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD
+{"ts": "2026-01-04T03:49:31.963246", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T03:49:31.963246 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T03:49:31.997916", "type": "EXECUTE_REQUEST", "payload": {"mode": "admin", "scope": "test-only", "result": "DENIED", "hrn": "HRN_INVALID_MODE", "human": "EXECUTE REQUEST -> DENIED | scope=test-only mode=admin"}}
+2026-01-04T03:49:31.997916 | EXECUTE REQUEST -> DENIED | scope=test-only mode=admin
+{"ts": "2026-01-04T03:49:31.997916", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T03:49:31.997916 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T03:50:27.442023", "type": "STATUS_CHECK", "payload": {"status": "HOLD", "human": "STATUS CHECK -> HOLD"}}
+2026-01-04T03:50:27.442023 | STATUS CHECK -> HOLD
+{"ts": "2026-01-04T03:50:27.455295", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T03:50:27.455295 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T03:50:27.468758", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "noop", "out": {"note": "NO_EXECUTION"}}}
+{"ts": "2026-01-04T03:50:27.468758", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T03:50:27.468758 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T03:50:27.468758", "type": "EXECUTE_REQUEST", "payload": {"mode": "noop", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD"}}
+2026-01-04T03:50:27.468758 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD
+{"ts": "2026-01-04T03:50:27.484626", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T03:50:27.484626 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T03:50:27.811383", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "sim", "out": {"ts": 1767498627.7395277, "scope": "test-only", "mode": "sim", "note": "D_LAYER_OK_NO_EXECUTION"}}}
+{"ts": "2026-01-04T03:50:27.812153", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T03:50:27.812153 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T03:50:27.812670", "type": "EXECUTE_REQUEST", "payload": {"mode": "sim", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD"}}
+2026-01-04T03:50:27.812670 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD
+{"ts": "2026-01-04T04:16:52.621066", "type": "SYSTEM_HOLD", "payload": {"reason": "system_start", "hrn": "HRN_OK", "human": "SYSTEM -> HOLD | reason=system_start | hrn=HRN_OK"}}
+2026-01-04T04:16:52.621066 | SYSTEM -> HOLD | reason=system_start | hrn=HRN_OK
+{"ts": "2026-01-04T04:17:05.810391", "type": "STATUS_CHECK", "payload": {"status": "HOLD", "human": "STATUS CHECK -> HOLD"}}
+2026-01-04T04:17:05.810391 | STATUS CHECK -> HOLD
+{"ts": "2026-01-04T04:17:05.839709", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T04:17:05.839709 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T04:17:05.852950", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "noop", "out": {"note": "NO_EXECUTION"}}}
+{"ts": "2026-01-04T04:17:05.854292", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T04:17:05.854292 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T04:17:05.854292", "type": "EXECUTE_REQUEST", "payload": {"mode": "noop", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD"}}
+2026-01-04T04:17:05.854292 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD
+{"ts": "2026-01-04T04:17:29.491683", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T04:17:29.491683 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T04:17:29.857687", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "sim", "out": {"ts": 1767500249.7828023, "scope": "test-only", "mode": "sim", "note": "D_LAYER_OK_NO_EXECUTION"}}}
+{"ts": "2026-01-04T04:17:29.858517", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T04:17:29.858517 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T04:17:29.859019", "type": "EXECUTE_REQUEST", "payload": {"mode": "sim", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD"}}
+2026-01-04T04:17:29.859019 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD
+{"ts": "2026-01-04T04:18:40.274867", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T04:18:40.274867 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T04:18:40.594714", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "sim", "out": {"ts": 1767500320.5229125, "scope": "test-only", "mode": "sim", "note": "D_LAYER_OK_NO_EXECUTION"}}}
+{"ts": "2026-01-04T04:18:40.595221", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T04:18:40.595221 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T04:18:40.595725", "type": "EXECUTE_REQUEST", "payload": {"mode": "sim", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD"}}
+2026-01-04T04:18:40.595725 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD
+{"ts": "2026-01-04T04:31:59.136918", "type": "UNKNOWN_REQUEST", "payload": {"path": "/health", "human": "UNKNOWN REQUEST -> DENIED | path=/health"}}
+2026-01-04T04:31:59.136918 | UNKNOWN REQUEST -> DENIED | path=/health
+{"ts": "2026-01-04T04:31:59.166121", "type": "UNKNOWN_REQUEST", "payload": {"path": "/config", "human": "UNKNOWN REQUEST -> DENIED | path=/config"}}
+2026-01-04T04:31:59.166121 | UNKNOWN REQUEST -> DENIED | path=/config
+{"ts": "2026-01-04T04:31:59.178062", "type": "STATUS_CHECK", "payload": {"status": "HOLD", "human": "STATUS CHECK -> HOLD"}}
+2026-01-04T04:31:59.178062 | STATUS CHECK -> HOLD
+{"ts": "2026-01-04T04:31:59.202693", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T04:31:59.202693 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T04:31:59.219364", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "noop", "out": {"note": "NO_EXECUTION"}}}
+{"ts": "2026-01-04T04:31:59.219364", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T04:31:59.219364 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T04:31:59.219364", "type": "EXECUTE_REQUEST", "payload": {"mode": "noop", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD"}}
+2026-01-04T04:31:59.219364 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD
+{"ts": "2026-01-04T04:31:59.233912", "type": "STATUS_CHECK", "payload": {"status": "HOLD", "human": "STATUS CHECK -> HOLD"}}
+2026-01-04T04:31:59.233912 | STATUS CHECK -> HOLD
+{"ts": "2026-01-04T04:31:59.260953", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T04:31:59.260953 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T04:31:59.624206", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "sim", "out": {"ts": 1767501119.527315, "scope": "test-only", "mode": "sim", "note": "D_LAYER_OK_NO_EXECUTION"}}}
+{"ts": "2026-01-04T04:31:59.624885", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T04:31:59.624885 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T04:31:59.625928", "type": "EXECUTE_REQUEST", "payload": {"mode": "sim", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD"}}
+2026-01-04T04:31:59.625928 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD
+{"ts": "2026-01-04T04:31:59.641573", "type": "STATUS_CHECK", "payload": {"status": "HOLD", "human": "STATUS CHECK -> HOLD"}}
+2026-01-04T04:31:59.641573 | STATUS CHECK -> HOLD
+{"ts": "2026-01-04T04:41:51.603695", "type": "STATUS_CHECK", "payload": {"status": "HOLD", "human": "STATUS CHECK -> HOLD"}}
+2026-01-04T04:41:51.603695 | STATUS CHECK -> HOLD
+{"ts": "2026-01-04T04:41:51.626317", "type": "UNKNOWN_REQUEST", "payload": {"path": "/health", "human": "UNKNOWN REQUEST -> DENIED | path=/health"}}
+2026-01-04T04:41:51.626317 | UNKNOWN REQUEST -> DENIED | path=/health
+{"ts": "2026-01-04T04:41:51.645233", "type": "UNKNOWN_REQUEST", "payload": {"path": "/config", "human": "UNKNOWN REQUEST -> DENIED | path=/config"}}
+2026-01-04T04:41:51.645233 | UNKNOWN REQUEST -> DENIED | path=/config
+{"ts": "2026-01-04T04:41:51.663215", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T04:41:51.663215 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T04:41:51.681915", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "noop", "out": {"note": "NO_EXECUTION"}}}
+{"ts": "2026-01-04T04:41:51.682374", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T04:41:51.682374 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T04:41:51.684378", "type": "EXECUTE_REQUEST", "payload": {"mode": "noop", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD"}}
+2026-01-04T04:41:51.684378 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD
+{"ts": "2026-01-04T04:41:51.696493", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T04:41:51.696493 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T04:41:52.089237", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "sim", "out": {"ts": 1767501712.011249, "scope": "test-only", "mode": "sim", "note": "D_LAYER_OK_NO_EXECUTION"}}}
+{"ts": "2026-01-04T04:41:52.089813", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T04:41:52.089813 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T04:41:52.091142", "type": "EXECUTE_REQUEST", "payload": {"mode": "sim", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD"}}
+2026-01-04T04:41:52.091142 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD
+{"ts": "2026-01-04T04:41:52.128779", "type": "STATUS_CHECK", "payload": {"status": "HOLD", "human": "STATUS CHECK -> HOLD"}}
+2026-01-04T04:41:52.128779 | STATUS CHECK -> HOLD
+{"ts": "2026-01-04T04:41:58.152809", "type": "STATUS_CHECK", "payload": {"status": "HOLD", "human": "STATUS CHECK -> HOLD"}}
+2026-01-04T04:41:58.152809 | STATUS CHECK -> HOLD
+{"ts": "2026-01-04T04:41:58.167081", "type": "UNKNOWN_REQUEST", "payload": {"path": "/health", "human": "UNKNOWN REQUEST -> DENIED | path=/health"}}
+2026-01-04T04:41:58.167081 | UNKNOWN REQUEST -> DENIED | path=/health
+{"ts": "2026-01-04T04:41:58.176367", "type": "UNKNOWN_REQUEST", "payload": {"path": "/config", "human": "UNKNOWN REQUEST -> DENIED | path=/config"}}
+2026-01-04T04:41:58.176367 | UNKNOWN REQUEST -> DENIED | path=/config
+{"ts": "2026-01-04T04:41:58.188953", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T04:41:58.188953 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T04:41:58.199460", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "noop", "out": {"note": "NO_EXECUTION"}}}
+{"ts": "2026-01-04T04:41:58.200460", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T04:41:58.200460 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T04:41:58.201070", "type": "EXECUTE_REQUEST", "payload": {"mode": "noop", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD"}}
+2026-01-04T04:41:58.201070 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD
+{"ts": "2026-01-04T04:41:58.212193", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T04:41:58.212193 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T04:41:58.559525", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "sim", "out": {"ts": 1767501718.4857297, "scope": "test-only", "mode": "sim", "note": "D_LAYER_OK_NO_EXECUTION"}}}
+{"ts": "2026-01-04T04:41:58.561229", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T04:41:58.561229 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T04:41:58.562365", "type": "EXECUTE_REQUEST", "payload": {"mode": "sim", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD"}}
+2026-01-04T04:41:58.562365 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD
+{"ts": "2026-01-04T04:41:58.593312", "type": "STATUS_CHECK", "payload": {"status": "HOLD", "human": "STATUS CHECK -> HOLD"}}
+2026-01-04T04:41:58.593312 | STATUS CHECK -> HOLD
+{"ts": "2026-01-04T04:43:46.513709", "type": "STATUS_CHECK", "payload": {"status": "HOLD", "human": "STATUS CHECK -> HOLD"}}
+2026-01-04T04:43:46.513709 | STATUS CHECK -> HOLD
+{"ts": "2026-01-04T04:43:46.530084", "type": "UNKNOWN_REQUEST", "payload": {"path": "/health", "human": "UNKNOWN REQUEST -> DENIED | path=/health"}}
+2026-01-04T04:43:46.530084 | UNKNOWN REQUEST -> DENIED | path=/health
+{"ts": "2026-01-04T04:43:46.543005", "type": "UNKNOWN_REQUEST", "payload": {"path": "/config", "human": "UNKNOWN REQUEST -> DENIED | path=/config"}}
+2026-01-04T04:43:46.543005 | UNKNOWN REQUEST -> DENIED | path=/config
+{"ts": "2026-01-04T04:43:46.553360", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T04:43:46.553360 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T04:43:46.571826", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "noop", "out": {"note": "NO_EXECUTION"}}}
+{"ts": "2026-01-04T04:43:46.571826", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T04:43:46.571826 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T04:43:46.571826", "type": "EXECUTE_REQUEST", "payload": {"mode": "noop", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD"}}
+2026-01-04T04:43:46.571826 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD
+{"ts": "2026-01-04T04:43:46.577168", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T04:43:46.577168 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T04:43:46.925316", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "sim", "out": {"ts": 1767501826.8426309, "scope": "test-only", "mode": "sim", "note": "D_LAYER_OK_NO_EXECUTION"}}}
+{"ts": "2026-01-04T04:43:46.926383", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T04:43:46.926383 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T04:43:46.927373", "type": "EXECUTE_REQUEST", "payload": {"mode": "sim", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD"}}
+2026-01-04T04:43:46.927373 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD
+{"ts": "2026-01-04T04:43:46.968150", "type": "STATUS_CHECK", "payload": {"status": "HOLD", "human": "STATUS CHECK -> HOLD"}}
+2026-01-04T04:43:46.968150 | STATUS CHECK -> HOLD
+{"ts": "2026-01-04T04:44:46.628644", "type": "STATUS_CHECK", "payload": {"status": "HOLD", "human": "STATUS CHECK -> HOLD"}}
+2026-01-04T04:44:46.628644 | STATUS CHECK -> HOLD
+{"ts": "2026-01-04T04:44:46.645240", "type": "UNKNOWN_REQUEST", "payload": {"path": "/health", "human": "UNKNOWN REQUEST -> DENIED | path=/health"}}
+2026-01-04T04:44:46.645240 | UNKNOWN REQUEST -> DENIED | path=/health
+{"ts": "2026-01-04T04:44:46.660091", "type": "UNKNOWN_REQUEST", "payload": {"path": "/config", "human": "UNKNOWN REQUEST -> DENIED | path=/config"}}
+2026-01-04T04:44:46.660091 | UNKNOWN REQUEST -> DENIED | path=/config
+{"ts": "2026-01-04T04:44:46.670108", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T04:44:46.670108 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T04:44:46.686215", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "noop", "out": {"note": "NO_EXECUTION"}}}
+{"ts": "2026-01-04T04:44:46.686215", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T04:44:46.686215 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T04:44:46.686215", "type": "EXECUTE_REQUEST", "payload": {"mode": "noop", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD"}}
+2026-01-04T04:44:46.686215 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD
+{"ts": "2026-01-04T04:44:46.702059", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T04:44:46.702059 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T04:44:47.022964", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "sim", "out": {"ts": 1767501886.9497025, "scope": "test-only", "mode": "sim", "note": "D_LAYER_OK_NO_EXECUTION"}}}
+{"ts": "2026-01-04T04:44:47.023474", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T04:44:47.023474 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T04:44:47.023988", "type": "EXECUTE_REQUEST", "payload": {"mode": "sim", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD"}}
+2026-01-04T04:44:47.023988 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD
+{"ts": "2026-01-04T04:44:47.057170", "type": "STATUS_CHECK", "payload": {"status": "HOLD", "human": "STATUS CHECK -> HOLD"}}
+2026-01-04T04:44:47.057170 | STATUS CHECK -> HOLD
+{"ts": "2026-01-04T04:44:59.443652", "type": "STATUS_CHECK", "payload": {"status": "HOLD", "human": "STATUS CHECK -> HOLD"}}
+2026-01-04T04:44:59.443652 | STATUS CHECK -> HOLD
+{"ts": "2026-01-04T04:44:59.459394", "type": "UNKNOWN_REQUEST", "payload": {"path": "/health", "human": "UNKNOWN REQUEST -> DENIED | path=/health"}}
+2026-01-04T04:44:59.459394 | UNKNOWN REQUEST -> DENIED | path=/health
+{"ts": "2026-01-04T04:44:59.469804", "type": "UNKNOWN_REQUEST", "payload": {"path": "/config", "human": "UNKNOWN REQUEST -> DENIED | path=/config"}}
+2026-01-04T04:44:59.469804 | UNKNOWN REQUEST -> DENIED | path=/config
+{"ts": "2026-01-04T04:44:59.484355", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T04:44:59.484355 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T04:44:59.500614", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "noop", "out": {"note": "NO_EXECUTION"}}}
+{"ts": "2026-01-04T04:44:59.500614", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T04:44:59.500614 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T04:44:59.500614", "type": "EXECUTE_REQUEST", "payload": {"mode": "noop", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD"}}
+2026-01-04T04:44:59.500614 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD
+{"ts": "2026-01-04T04:44:59.510830", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1"}}
+2026-01-04T04:44:59.510830 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1
+{"ts": "2026-01-04T04:44:59.859380", "type": "D_RUN_RESULT", "payload": {"ok": true, "scope": "test-only", "mode": "sim", "out": {"ts": 1767501899.7785132, "scope": "test-only", "mode": "sim", "note": "D_LAYER_OK_NO_EXECUTION"}}}
+{"ts": "2026-01-04T04:44:59.860483", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED"}}
+2026-01-04T04:44:59.860483 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED
+{"ts": "2026-01-04T04:44:59.861510", "type": "EXECUTE_REQUEST", "payload": {"mode": "sim", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD"}}
+2026-01-04T04:44:59.861510 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD
+{"ts": "2026-01-04T04:44:59.898026", "type": "STATUS_CHECK", "payload": {"status": "HOLD", "human": "STATUS CHECK -> HOLD"}}
+2026-01-04T04:44:59.898026 | STATUS CHECK -> HOLD
+{"ts": "2026-01-04T07:18:41.967264", "type": "SYSTEM_HOLD", "payload": {"reason": "system_start", "hrn": "HRN_OK", "request_id": "", "human": "SYSTEM -> HOLD | reason=system_start | hrn=HRN_OK | rid="}}
+2026-01-04T07:18:41.967264 | SYSTEM -> HOLD | reason=system_start | hrn=HRN_OK | rid=
+{"ts": "2026-01-04T07:19:19.566945", "type": "STATUS_CHECK", "payload": {"request_id": "48c08c6e1ea5", "status": "HOLD", "human": "STATUS CHECK -> HOLD | rid=48c08c6e1ea5"}}
+2026-01-04T07:19:19.566945 | STATUS CHECK -> HOLD | rid=48c08c6e1ea5
+{"ts": "2026-01-04T07:19:19.607285", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "request_id": "66d0cda558d7", "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=66d0cda558d7"}}
+2026-01-04T07:19:19.607285 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=66d0cda558d7
+{"ts": "2026-01-04T07:19:19.623080", "type": "D_RUN_RESULT", "payload": {"request_id": "abbadfd69130", "ok": true, "scope": "test-only", "mode": "noop", "out": {"note": "NO_EXECUTION"}}}
+{"ts": "2026-01-04T07:19:19.623080", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "request_id": "abbadfd69130", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=abbadfd69130"}}
+2026-01-04T07:19:19.623080 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=abbadfd69130
+{"ts": "2026-01-04T07:19:19.623080", "type": "EXECUTE_REQUEST", "payload": {"request_id": "abbadfd69130", "mode": "noop", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD | rid=abbadfd69130"}}
+2026-01-04T07:19:19.623080 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD | rid=abbadfd69130
+{"ts": "2026-01-04T07:19:19.623080", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "request_id": "33e69387c8b9", "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=33e69387c8b9"}}
+2026-01-04T07:19:19.623080 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=33e69387c8b9
+{"ts": "2026-01-04T07:19:19.838902", "type": "D_RUN_RESULT", "payload": {"request_id": "e494a8579527", "ok": false, "scope": "test-only", "mode": "sim", "out": null, "stderr": "failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.", "elapsed_sec": 0.189}}
+{"ts": "2026-01-04T07:19:19.838902", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "request_id": "e494a8579527", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=e494a8579527"}}
+2026-01-04T07:19:19.838902 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=e494a8579527
+{"ts": "2026-01-04T07:19:19.838902", "type": "EXECUTE_REQUEST", "payload": {"request_id": "e494a8579527", "mode": "sim", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(FAIL) -> AUTO HOLD | rid=e494a8579527"}}
+2026-01-04T07:19:19.838902 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(FAIL) -> AUTO HOLD | rid=e494a8579527
+{"ts": "2026-01-04T07:19:19.874812", "type": "STATUS_CHECK", "payload": {"request_id": "3d2972787eb3", "status": "HOLD", "human": "STATUS CHECK -> HOLD | rid=3d2972787eb3"}}
+2026-01-04T07:19:19.874812 | STATUS CHECK -> HOLD | rid=3d2972787eb3
+{"ts": "2026-01-04T07:31:24.732517", "type": "STATUS_CHECK", "payload": {"request_id": "b0acc8f7eee2", "status": "HOLD", "human": "STATUS CHECK -> HOLD | rid=b0acc8f7eee2"}}
+2026-01-04T07:31:24.732517 | STATUS CHECK -> HOLD | rid=b0acc8f7eee2
+{"ts": "2026-01-04T07:31:24.847404", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "request_id": "13bccfe807b7", "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=13bccfe807b7"}}
+2026-01-04T07:31:24.847404 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=13bccfe807b7
+{"ts": "2026-01-04T07:31:24.876276", "type": "D_RUN_RESULT", "payload": {"request_id": "cb0eaf8dde98", "ok": true, "scope": "test-only", "mode": "noop", "out": {"note": "NO_EXECUTION"}}}
+{"ts": "2026-01-04T07:31:24.876276", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "request_id": "cb0eaf8dde98", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=cb0eaf8dde98"}}
+2026-01-04T07:31:24.876276 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=cb0eaf8dde98
+{"ts": "2026-01-04T07:31:24.876276", "type": "EXECUTE_REQUEST", "payload": {"request_id": "cb0eaf8dde98", "mode": "noop", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD | rid=cb0eaf8dde98"}}
+2026-01-04T07:31:24.876276 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD | rid=cb0eaf8dde98
+{"ts": "2026-01-04T07:31:25.085157", "type": "STATUS_CHECK", "payload": {"request_id": "252360f20220", "status": "HOLD", "human": "STATUS CHECK -> HOLD | rid=252360f20220"}}
+2026-01-04T07:31:25.085157 | STATUS CHECK -> HOLD | rid=252360f20220
+{"ts": "2026-01-04T07:32:42.893292", "type": "STATUS_CHECK", "payload": {"request_id": "718b99c2af6f", "status": "HOLD", "human": "STATUS CHECK -> HOLD | rid=718b99c2af6f"}}
+2026-01-04T07:32:42.893292 | STATUS CHECK -> HOLD | rid=718b99c2af6f
+{"ts": "2026-01-04T07:32:42.980181", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "request_id": "aee12d47ae7e", "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=aee12d47ae7e"}}
+2026-01-04T07:32:42.980181 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=aee12d47ae7e
+{"ts": "2026-01-04T07:32:42.997826", "type": "D_RUN_RESULT", "payload": {"request_id": "f33b27003696", "ok": true, "scope": "test-only", "mode": "noop", "out": {"note": "NO_EXECUTION"}}}
+{"ts": "2026-01-04T07:32:42.997826", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "request_id": "f33b27003696", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=f33b27003696"}}
+2026-01-04T07:32:42.997826 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=f33b27003696
+{"ts": "2026-01-04T07:32:42.997826", "type": "EXECUTE_REQUEST", "payload": {"request_id": "f33b27003696", "mode": "noop", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD | rid=f33b27003696"}}
+2026-01-04T07:32:42.997826 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD | rid=f33b27003696
+{"ts": "2026-01-04T07:32:43.105035", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "request_id": "61238ca84b42", "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=61238ca84b42"}}
+2026-01-04T07:32:43.105035 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=61238ca84b42
+{"ts": "2026-01-04T07:32:43.477384", "type": "D_RUN_RESULT", "payload": {"request_id": "2b47d88802da", "ok": true, "scope": "test-only", "mode": "sim", "out": {"ts": 1767511963.4031162, "scope": "test-only", "mode": "sim", "note": "D_LAYER_OK_NO_EXECUTION"}, "stderr": "", "elapsed_sec": 0.352}}
+{"ts": "2026-01-04T07:32:43.477384", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "request_id": "2b47d88802da", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=2b47d88802da"}}
+2026-01-04T07:32:43.477384 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=2b47d88802da
+{"ts": "2026-01-04T07:32:43.478850", "type": "EXECUTE_REQUEST", "payload": {"request_id": "2b47d88802da", "mode": "sim", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD | rid=2b47d88802da"}}
+2026-01-04T07:32:43.478850 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD | rid=2b47d88802da
+{"ts": "2026-01-04T07:32:43.546287", "type": "STATUS_CHECK", "payload": {"request_id": "a6d1b2564bb8", "status": "HOLD", "human": "STATUS CHECK -> HOLD | rid=a6d1b2564bb8"}}
+2026-01-04T07:32:43.546287 | STATUS CHECK -> HOLD | rid=a6d1b2564bb8
+{"ts": "2026-01-04T07:45:29.135790", "type": "STATUS_CHECK", "payload": {"request_id": "516bddd7dee8", "status": "HOLD", "human": "STATUS CHECK -> HOLD | rid=516bddd7dee8"}}
+2026-01-04T07:45:29.135790 | STATUS CHECK -> HOLD | rid=516bddd7dee8
+{"ts": "2026-01-04T07:45:29.212110", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "request_id": "f0b8469ef45c", "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=f0b8469ef45c"}}
+2026-01-04T07:45:29.212110 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=f0b8469ef45c
+{"ts": "2026-01-04T07:45:29.226317", "type": "D_RUN_RESULT", "payload": {"request_id": "30000a823819", "ok": true, "scope": "test-only", "mode": "noop", "out": {"note": "NO_EXECUTION"}}}
+{"ts": "2026-01-04T07:45:29.227322", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "request_id": "30000a823819", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=30000a823819"}}
+2026-01-04T07:45:29.227322 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=30000a823819
+{"ts": "2026-01-04T07:45:29.227322", "type": "EXECUTE_REQUEST", "payload": {"request_id": "30000a823819", "mode": "noop", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD | rid=30000a823819"}}
+2026-01-04T07:45:29.227322 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD | rid=30000a823819
+{"ts": "2026-01-04T07:45:29.319017", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "request_id": "0454334e6ca6", "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=0454334e6ca6"}}
+2026-01-04T07:45:29.319017 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=0454334e6ca6
+{"ts": "2026-01-04T07:45:29.676073", "type": "D_RUN_RESULT", "payload": {"request_id": "8d3a2862b6fc", "ok": true, "scope": "test-only", "mode": "sim", "out": {"ts": 1767512729.607761, "scope": "test-only", "mode": "sim", "note": "D_LAYER_OK_NO_EXECUTION"}, "stderr": "", "elapsed_sec": 0.347}}
+{"ts": "2026-01-04T07:45:29.676596", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "request_id": "8d3a2862b6fc", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=8d3a2862b6fc"}}
+2026-01-04T07:45:29.676596 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=8d3a2862b6fc
+{"ts": "2026-01-04T07:45:29.677745", "type": "EXECUTE_REQUEST", "payload": {"request_id": "8d3a2862b6fc", "mode": "sim", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD | rid=8d3a2862b6fc"}}
+2026-01-04T07:45:29.677745 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD | rid=8d3a2862b6fc
+{"ts": "2026-01-04T07:45:29.714930", "type": "STATUS_CHECK", "payload": {"request_id": "8eac61dcb36f", "status": "HOLD", "human": "STATUS CHECK -> HOLD | rid=8eac61dcb36f"}}
+2026-01-04T07:45:29.714930 | STATUS CHECK -> HOLD | rid=8eac61dcb36f
+{"ts": "2026-01-04T07:46:25.798499", "type": "STATUS_CHECK", "payload": {"request_id": "974fda4977e9", "status": "HOLD", "human": "STATUS CHECK -> HOLD | rid=974fda4977e9"}}
+2026-01-04T07:46:25.798499 | STATUS CHECK -> HOLD | rid=974fda4977e9
+{"ts": "2026-01-04T07:46:25.877143", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "request_id": "63efe7dad45c", "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=63efe7dad45c"}}
+2026-01-04T07:46:25.877143 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=63efe7dad45c
+{"ts": "2026-01-04T07:46:25.892056", "type": "D_RUN_RESULT", "payload": {"request_id": "805de82f6b9b", "ok": true, "scope": "test-only", "mode": "noop", "out": {"note": "NO_EXECUTION"}}}
+{"ts": "2026-01-04T07:46:25.892056", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "request_id": "805de82f6b9b", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=805de82f6b9b"}}
+2026-01-04T07:46:25.892056 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=805de82f6b9b
+{"ts": "2026-01-04T07:46:25.892056", "type": "EXECUTE_REQUEST", "payload": {"request_id": "805de82f6b9b", "mode": "noop", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD | rid=805de82f6b9b"}}
+2026-01-04T07:46:25.892056 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD | rid=805de82f6b9b
+{"ts": "2026-01-04T07:46:25.959321", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "request_id": "7a73e3406413", "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=7a73e3406413"}}
+2026-01-04T07:46:25.959321 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=7a73e3406413
+{"ts": "2026-01-04T07:46:26.323779", "type": "D_RUN_RESULT", "payload": {"request_id": "c7b00644c859", "ok": true, "scope": "test-only", "mode": "sim", "out": {"ts": 1767512786.24482, "scope": "test-only", "mode": "sim", "note": "D_LAYER_OK_NO_EXECUTION"}, "stderr": "", "elapsed_sec": 0.351}}
+{"ts": "2026-01-04T07:46:26.324335", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "request_id": "c7b00644c859", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=c7b00644c859"}}
+2026-01-04T07:46:26.324335 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=c7b00644c859
+{"ts": "2026-01-04T07:46:26.325067", "type": "EXECUTE_REQUEST", "payload": {"request_id": "c7b00644c859", "mode": "sim", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD | rid=c7b00644c859"}}
+2026-01-04T07:46:26.325067 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD | rid=c7b00644c859
+{"ts": "2026-01-04T07:46:26.363535", "type": "STATUS_CHECK", "payload": {"request_id": "b56f8a0ddfb6", "status": "HOLD", "human": "STATUS CHECK -> HOLD | rid=b56f8a0ddfb6"}}
+2026-01-04T07:46:26.363535 | STATUS CHECK -> HOLD | rid=b56f8a0ddfb6
+{"ts": "2026-01-04T08:15:26.675541", "type": "STATUS_CHECK", "payload": {"request_id": "a2b7fd85c76b", "status": "HOLD", "human": "STATUS CHECK -> HOLD | rid=a2b7fd85c76b"}}
+2026-01-04T08:15:26.675541 | STATUS CHECK -> HOLD | rid=a2b7fd85c76b
+{"ts": "2026-01-04T08:15:26.736769", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "request_id": "67d015345e8c", "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=67d015345e8c"}}
+2026-01-04T08:15:26.736769 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=67d015345e8c
+{"ts": "2026-01-04T08:15:26.757383", "type": "D_RUN_RESULT", "payload": {"request_id": "23a39981cf14", "ok": true, "scope": "test-only", "mode": "noop", "out": {"note": "NO_EXECUTION"}}}
+{"ts": "2026-01-04T08:15:26.757383", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "request_id": "23a39981cf14", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=23a39981cf14"}}
+2026-01-04T08:15:26.757383 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=23a39981cf14
+{"ts": "2026-01-04T08:15:26.757383", "type": "EXECUTE_REQUEST", "payload": {"request_id": "23a39981cf14", "mode": "noop", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD | rid=23a39981cf14"}}
+2026-01-04T08:15:26.757383 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | D_OK -> AUTO HOLD | rid=23a39981cf14
+{"ts": "2026-01-04T08:15:26.827946", "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "request_id": "d136cf8f5422", "human": "HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=d136cf8f5422"}}
+2026-01-04T08:15:26.827946 | HUMAN APPROVAL -> HOLD RELEASED | scope=test-only ttl=60s uses=1 | rid=d136cf8f5422
+{"ts": "2026-01-04T08:15:27.158723", "type": "D_RUN_RESULT", "payload": {"request_id": "649b05bf07f8", "ok": true, "scope": "test-only", "mode": "sim", "out": {"ts": 1767514527.088455, "scope": "test-only", "mode": "sim", "note": "D_LAYER_OK_NO_EXECUTION"}, "stderr": "", "elapsed_sec": 0.316}}
+{"ts": "2026-01-04T08:15:27.159822", "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "request_id": "649b05bf07f8", "human": "SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=649b05bf07f8"}}
+2026-01-04T08:15:27.159822 | SYSTEM -> HOLD | reason=one_shot_consumed | hrn=HRN_ONE_SHOT_CONSUMED | rid=649b05bf07f8
+{"ts": "2026-01-04T08:15:27.160339", "type": "EXECUTE_REQUEST", "payload": {"request_id": "649b05bf07f8", "mode": "sim", "scope": "test-only", "result": "ACCEPTED", "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD | rid=649b05bf07f8"}}
+2026-01-04T08:15:27.160339 | EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM(OK) -> AUTO HOLD | rid=649b05bf07f8
+{"ts": "2026-01-04T08:15:27.202713", "type": "STATUS_CHECK", "payload": {"request_id": "460435cd7d6a", "status": "HOLD", "human": "STATUS CHECK -> HOLD | rid=460435cd7d6a"}}
+2026-01-04T08:15:27.202713 | STATUS CHECK -> HOLD | rid=460435cd7d6a
+{"ts": 1767524982.3029876, "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "room_id": "9099547e-0f93-43d0-8e83-42324dbd0b20"}, "human": "HUMAN APPROVAL -> HOLD RELEASED"}
+{"ts": 1767524982.315837, "type": "EXECUTE_REQUEST", "payload": {"room_id": "984bd284-1369-4180-986f-e5c0fe44837e", "mode": "noop", "scope": "test-only"}, "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | NOOP"}
+{"ts": 1767524982.315837, "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "room_id": "984bd284-1369-4180-986f-e5c0fe44837e"}, "human": "SYSTEM -> HOLD | reason=one_shot_consumed"}
+{"ts": 1767524982.4395216, "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "room_id": "c5180d9a-0f06-460b-87d0-c04edcb5fb5d"}, "human": "HUMAN APPROVAL -> HOLD RELEASED"}
+{"ts": 1767524982.4500792, "type": "EXECUTE_REQUEST", "payload": {"room_id": "6fc1c3be-87b5-4362-8063-8a7d25c50e58", "mode": "sim", "scope": "test-only"}, "human": "EXECUTE REQUEST -> ACCEPTED | scope=test-only | SIM"}
+{"ts": 1767524982.7745855, "type": "SYSTEM_HOLD", "payload": {"reason": "one_shot_consumed", "hrn": "HRN_ONE_SHOT_CONSUMED", "room_id": "6fc1c3be-87b5-4362-8063-8a7d25c50e58"}, "human": "SYSTEM -> HOLD | reason=one_shot_consumed"}
+{"ts": 1767527307.6152468, "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "room_id": "a514998a-cdc4-4ba1-9fe7-f2ad76cd7526"}, "human": "HUMAN APPROVAL -> HOLD RELEASED"}
+{"ts": 1767527318.206126, "type": "HUMAN_APPROVAL", "payload": {"scope": "test-only", "ttl": 60, "uses": 1, "room_id": "2d196f6d-81b2-4543-86c3-ebc25bae57ca"}, "human": "HUMAN APPROVAL -> HOLD RELEASED"}

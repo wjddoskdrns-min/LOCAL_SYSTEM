@@ -1,0 +1,17 @@
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# venv (있으면)
+.venv/
+venv/
+
+# logs / runtime outputs (원하면 유지 가능)
+logs/
+*.log
+
+# data outputs (운영 생성물은 보통 제외)
+data/advice/*.json
+data/runs.json

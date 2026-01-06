@@ -153,3 +153,31 @@ def get_advice(run_id: str) -> Dict[str, Any]:
     if adv is None:
         return {"ok": False, "run_id": run_id, "state": "NOT_FOUND"}
     return adv
+
+# app/main.py
+from fastapi import FastAPI, HTTPException
+from dataclasses import asdict
+from typing import Any, Dict
+
+from contract import AssistRequest, AssistResponse
+from app.assistant import run_assist
+
+app = FastAPI()
+
+@app.get("/health")
+def health():
+    return {"ok": True}
+
+@app.post("/assistant/run")
+def assistant_run(payload: Dict[str, Any]):
+    """
+    SSOT: contract.AssistRequest/AssistResponse만 사용.
+    외부/보조 엔진은 결론/집행 금지. (HOLD 기본)
+    """
+    try:
+        req = AssistRequest(**payload)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Invalid AssistRequest payload: {e}")
+
+    res: AssistResponse = run_assist(req)
+    return asdict(res)

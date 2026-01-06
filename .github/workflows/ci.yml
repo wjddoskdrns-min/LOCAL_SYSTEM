@@ -28,6 +28,35 @@ jobs:
           Start-Process python "-m uvicorn app.main:app --host 127.0.0.1 --port 25613"
           Start-Sleep -Seconds 3
 
+      - name: SSOT guard (contract lock)
+        shell: pwsh
+        run: |
+          if ($env:GITHUB_EVENT_NAME -ne "pull_request") {
+            Write-Host "Not a PR event - skipping SSOT guard."
+            exit 0
+          }
+
+          $baseRef = $env:GITHUB_BASE_REF
+          if (-not $baseRef) { $baseRef = "main" }
+
+          git fetch origin $baseRef --depth=1 | Out-Null
+
+          $changed = git diff --name-only ("origin/{0}...HEAD" -f $baseRef)
+          $hit = $changed | Where-Object { $_ -ieq "contract.py" }
+
+          if ($hit) {
+            $msg = git log -1 --pretty=%B
+            if ($msg -match "\[ALLOW_CONTRACT_CHANGE\]") {
+              Write-Host "[WARN] contract.py changed, but override token found in commit message."
+              exit 0
+            }
+
+            Write-Error "SSOT LOCK: contract.py was modified. Use Founder-Veto token ([ALLOW_CONTRACT_CHANGE]) or follow approval process."
+            exit 1
+          }
+
+          Write-Host "[OK] SSOT guard passed."
+
       - name: Verify steps
         shell: pwsh
         run: |
